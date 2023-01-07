@@ -83,7 +83,14 @@ function getSelected() {
     let selected = getSelected();
     console.log(selected);
     if(!selected){
-        alert("please select  an option")
+        const toast = document.createElement("div");
+        toast.id = "toasts"
+        toast.classList.add("toast")
+        toast.innerHTML = "please select  an option"
+        document.body.append(toast)
+        setTimeout(()=>{
+            toast.remove()
+        } , 1000)
         return
     }
     if(selected === quizData[currentQuiz].correct){
