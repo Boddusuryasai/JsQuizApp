@@ -87,7 +87,8 @@ function getSelected() {
         toast.id = "toasts"
         toast.classList.add("toast")
         toast.innerHTML = "please select  an option"
-        document.body.append(toast)
+        document.body.append(toast) 
+        document.getElementById("notselected").play()
         setTimeout(()=>{
             toast.remove()
         } , 1000)
